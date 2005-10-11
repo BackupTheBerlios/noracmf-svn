@@ -106,4 +106,6 @@ case 'postgres':
 	
 default:
 	// default
+	break;
+}
 ?>
