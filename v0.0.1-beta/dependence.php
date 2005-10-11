@@ -27,6 +27,8 @@ foreach($config->Debug as $configDebug) {
 }
 foreach($config->Software as $configSoftware) {
 }
+foreach($config->Cache as $configCache) {
+}
 
 // check installation
 if(!$configSoftware->Installed) {
