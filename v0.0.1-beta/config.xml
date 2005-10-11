@@ -22,8 +22,9 @@
 	</Software>
 	
 	<Cache>
-		<Typ><file/Typ>
+		<Typ>file</Typ>
 		<Dir></Dir>
+		<Id></Id>
 	</Cache>
 </Config>
 
