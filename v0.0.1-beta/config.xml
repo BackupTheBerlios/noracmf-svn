@@ -20,6 +20,11 @@
 		<Developersite>http://noracmf.berlios.de</Developersite>
 		<Installed></Installed>
 	</Software>
+	
+	<Cache>
+		<Typ><file/Typ>
+		<Dir></Dir>
+	</Cache>
 </Config>
 
 
