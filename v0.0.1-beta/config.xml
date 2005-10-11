@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <Config>
 	<Database>
-		<Type>MySQL</Type>
+		<Type>mysql</Type>
 		<Host>localhost</Host>
 		<Port>3306</Port>
 		<User>root</User>
