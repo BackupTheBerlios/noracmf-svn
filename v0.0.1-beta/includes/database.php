@@ -22,17 +22,57 @@ $dbPort   = $configDatabase->Port;
 $dbUser   = $configDatabase->User;
 $dbPasswd = $configDatabase->Password;
 $dbName   = $configDatabase->Name;
-$dbms = strtolower($configDatabase->Type);
+$dbms     = $configDatabase->Type;
 
 
 switch($dbms) {
+case 'db2':
+	if($configDatabase->Persist === true) {
+	
+		// persist connection
+		$dsn = "driver={IBM db2 odbc DRIVER};Database=$dbName;hostname=$dbHost;port=$dbPort;protocol=TCPIP;".
+			   "uid=$dbUser;pwd=$dbPasswd";
+		$db->PConnect($dsn);
+		if(!$db) exit("Database Error");
+		$db->debug = $configDebug->Debug;
+	} else {
+	
+		// non-persist connection
+		$dsn = "driver={IBM db2 odbc DRIVER};Database=$dbName;hostname=$dbHost;port=$dbPort;protocol=TCPIP;".
+			   "uid=$dbUser;pwd=$dbPasswd";
+		$db->Connect($dsn);
+		if(!$db) exit("Database Error");
+		$db->debug = $configDebug->Debug;
+	}
+	break;		
+
+
+case 'firebird':
+	if($configDatabase->Persist === true) {
+	
+		// persist connection
+		$dsn = "firebird://$dbUser:$dbPasswd@$dbHost/$dbName?persist";
+		$db  = ADONewConnection($dsn);
+		if(!$db) exit("Database Error");
+		$db->debug = $configDebug->Debug;
+	} else {
+	
+		// non-persist connection
+		$dsn = "firebird://$dbUser:$dbPasswd@$dbHost/$dbName";
+		$db  = ADONewConnection($dsn);
+		if(!db) exit("Database Error");
+		$db->debug = $configDebug->Debug;
+	}
+	break;
+
+
 case 'mysql':
 	if($configDatabase->Persist === true) {
 
 		// persist connection
 		$dsn = "mysql://$dbUser:$dbPasswd@$dbHost/$dbName?persist";
-		$db = ADONewConnection($dsn);
-		if(!db) exit("Database Error");
+		$db  = ADONewConnection($dsn);
+		if(!$db) exit("Database Error");
 		$db->debug = $configDebug->Debug;
 	} else {
 	
@@ -44,8 +84,25 @@ case 'mysql':
 	}
 	break;
 	
-case 'postgres7':
+	
+case 'postgres':
+	if($configDatabase->Persist === true) {
+	
+		// persist connection
+		$dsn = "postgres://$dbUser:$dbPasswd@$dbHost/$dbName?persist";
+		$db  = ADONewConnection($dsn);
+		if(!db) exit("Database Error");
+		$db->debug = $configDebug->Debug;
+	} else {
+		
+		// non-persist connection
+		$dsn = "postgres://$dbUser:$dbPasswd@$dbHost/$dbName";
+		$db  = ADONewConnection($dsn);
+		if(!db) exit("Database Error");
+		$db->debug = $configDebug->Debug;
+	}
 	break;
+	
 	
 default:
 	// default
