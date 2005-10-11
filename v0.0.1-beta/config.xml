@@ -22,7 +22,7 @@
 	</Software>
 	
 	<Cache>
-		<Typ>file</Typ>
+		<Type>file</Type>
 		<Dir></Dir>
 		<Id></Id>
 	</Cache>
