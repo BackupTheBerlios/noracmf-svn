@@ -23,7 +23,7 @@
 	
 	<Cache>
 		<Type>file</Type>
-		<Dir></Dir>
+		<Dir>cache</Dir>
 		<Id></Id>
 	</Cache>
 </Config>

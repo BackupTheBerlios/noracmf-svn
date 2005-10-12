@@ -37,6 +37,7 @@ if(!$configSoftware->Installed) {
 
 // require include files
 require_once($rootpath."includes/database.php");
+require_once($rootpath."includes/template.php");
 
 
 

@@ -15,5 +15,5 @@ define('nora', true);
 
 $rootpath = './';
 require_once($rootpath.'dependence.php');
-
+$template->load("test.xml", "test.xsl");
 ?>
