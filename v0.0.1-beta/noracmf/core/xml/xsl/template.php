@@ -30,15 +30,14 @@ class template
 		$this->cacheDir  = $configCache->Dir;
 		
 		// initialize cache class
-		require_once($rootpath."noracmf/core/pear/cache/Cache.php");
+		include_once($rootpath."noracmf/core/pear/Cache.php");
 		$cache = new Cache("file", array('cache_dir' => $rootpath.$this->cacheDir));
 	}
 	
 	
 	public function load($xml, $xsl)
 	{
-				// initialize cache class
-		require_once($rootpath."noracmf/core/pear/cache/Cache.php");
+		// initialize cache class
 		$cache = new Cache("file", array('cache_dir' => $rootpath.$this->cacheDir));
 		if(file_exists($rootpath.$xml) AND file_exists($rootpath.$xsl)) {
 			// create cache id
@@ -50,7 +49,7 @@ class template
 				
 				$xslProcessor = xslt_create();
 				
-				$arguments = array('/_xml' => $xml);
+				$args = array('/_xml' => $xml);
 				$this->content = xslt_process($xslProcessor, $rootpath."template/".$xml, $rootpath."template/xsl/".$xsl, NULL, $args);
 				
 				if(!$this->content) {
