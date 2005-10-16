@@ -1,7 +1,7 @@
 <?php
 /**
- * @category   xsl template class
- * @package    xsl
+ * @category   template class
+ * @package    template
  * @author     Klaus Weiss <klaus.weiss@nanet.at>
  * @author 
  * 
