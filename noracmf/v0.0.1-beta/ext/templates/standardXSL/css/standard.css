@@ -147,9 +147,8 @@ a:active {
 	color:#737E1F;
 }
 
-#content-main
-{
-	padding: 1em 0em 0em 0em;
+#content-main {
+	float:left;
 }
 
 #content-content1 {
