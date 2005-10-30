@@ -51,9 +51,9 @@
 	<br/>
 	<a href="#">Legal</a> - <a href="#">About</a> - <a href="#">Please Donate!</a>  <br/>
 	<br/>
-	<a href="http://developer.berlios.de" title="BerliOS Developer"> <img src="berliOS_small_logo.png" alt="BerliOS Developer Logo" id="img"/></a>
-	<a href="http://validator.w3.org/check?uri=referer"><img src="valid-xhtml10.png" id="img" alt="Valid XHTML 1.0!"/></a>
-	<a href="http://jigsaw.w3.org/css-validator/validator?uri="><img src="valid-css.png" alt="Valid CSS!" id="img"/></a>
+	<a href="http://developer.berlios.de" title="BerliOS Developer"> <img src="ext/templates/standardXSL/img/berliOS_small_logo.png" alt="BerliOS Developer Logo" id="img"/></a>
+	<a href="http://validator.w3.org/check?uri=referer"><img src="ext/templates/standardXSL/img/valid-xhtml10.png" id="img" alt="Valid XHTML 1.0!"/></a>
+	<a href="http://jigsaw.w3.org/css-validator/validator?uri="><img src="ext/templates/standardXSL/img/valid-css.png" alt="Valid CSS!" id="img"/></a>
 </div>
 	</xsl:for-each>
 </body>
