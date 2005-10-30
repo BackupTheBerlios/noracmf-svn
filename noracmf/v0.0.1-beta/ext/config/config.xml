@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Config>
+	<Common>
+		<Hostname></Hostname>
+		<SiteTitle>NoraCMF Website</SiteTitle>
+		<SiteOverline>NoraCMF</SiteOverline>
+	</Common>
+	
+	<Debug>
+		<Debug>false</Debug>
+	</Debug>
+	
+	<Software>
+		<Name>NoraCMF</Name>
+		<Version>0.0.1-beta</Version>
+		<Developersite>http://noracmf.berlios.de</Developersite>
+		<Installed></Installed>
+	</Software>
+	
+	<Template>
+		<Name>standardXSL</Name>
+		<Cache>true</Cache>
+		<Method>xml</Method>
+	</Template>
+
+</Config>
+
+
+
+
