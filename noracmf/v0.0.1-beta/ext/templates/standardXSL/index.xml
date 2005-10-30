@@ -1,0 +1,21 @@
+<?xml-stylesheet href="xsl/indexHTML.xsl" type="text/xsl"?>
+<index>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+	<meta name="robots" content=""/>
+	<meta name="language" content="de"/>
+	<title>Test</title>
+</head>
+<body>
+	<header>
+		<siteOverline>NoraCMF</siteOverline>
+		<mainLink>
+			<links>	
+				<span id="navigation-links-cat1"><a href="#">Lorem ipsum</a></span><base/>
+			</links>
+		</mainLink>
+	</header>
+</body>
+</index>
