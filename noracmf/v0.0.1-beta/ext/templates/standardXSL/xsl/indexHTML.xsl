@@ -24,9 +24,7 @@
 			</div>
 			
 			<div id="navigation-links-main">
-				<xsl:for-each select="mainLink/links">
-					<xsl:copy-of select="./"/>
-				</xsl:for-each>
+				<xsl:copy-of select="./mainLink/links"/>
 				<br/>
 				<br/>
 			</div>
@@ -36,23 +34,14 @@
 	</xsl:for-each>
 	
 	
+	<div id="navigation-links-row">
+		<xsl:copy-of select="./content/subLink/links/"/>
+	</div>
+	
 	<div id="content-main">
 	<div id="content-content1">
-	<h1>Lorem ipsum</h1>
-	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam    
-	    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus 
-	    est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
-	    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
-	    gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
-	    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
-	    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ametur.
-	    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ametur.et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ametur.et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ametur.et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ametur.
-	  <ul>
-		  <li>higher</li>
-		  <li>high</li>
-		  <li>low</li>
-		  <li>lower</li>
-	  </ul>
+		<xsl:copy-of select="./content/contentMain"/>
+	</div>
 	</div>
 	
 	<div id="footer">
@@ -66,28 +55,6 @@
 	<a href="http://validator.w3.org/check?uri=referer"><img src="valid-xhtml10.png" id="img" alt="Valid XHTML 1.0!"/></a>
 	<a href="http://jigsaw.w3.org/css-validator/validator?uri="><img src="valid-css.png" alt="Valid CSS!" id="img"/></a>
 </div>
-</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	</xsl:for-each>
 </body>
 </html>
