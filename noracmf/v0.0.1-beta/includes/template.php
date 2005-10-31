@@ -11,7 +11,7 @@
  *
  * @lastchange 30.10.2005 19:46
 */
-//if(!defined("nora")) exit();
+if(!defined("nora")) exit();
 
 // require template class
 require_once($rootpath."noracmf/template/template.php");
