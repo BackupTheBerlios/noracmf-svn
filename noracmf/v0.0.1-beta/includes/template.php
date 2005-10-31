@@ -27,4 +27,40 @@ case 'xml':
 	break;
 }
 
+
+// set Arrays
+$mainLink = array("name"  => array(),
+                  "desc"  => array(),
+				  "link"  => array(),
+				  "chmod" => array(),
+				  "code"  => array(),
+				  "count" => array());
+				  
+$subLink = array("name"    => array(),
+				 "desc"    => array(),
+				 "link"    => array(),
+				 "main_id" => array(),
+				 "chmod"   => array(),
+				 "code"    => array(),
+				 "count"   => array());
+				 
+// get Number of main links
+$rs = $db->Execute("SELECT * FROM ".$dbPrefix."navigation_main");
+$mainLink["count"] = $db->Affected_Rows($rs);
+
+// get information of main links
+for($i = 1; $i <= $mainLink["count"]; $i++) {
+	$rs = $db->Execute("SELECT * FROM ".$dbPrefix."navigation_main WHERE id = '$i'");
+	
+	$mainLink["name"][$i]  = $rs->fields['name'];
+	$mainLink["desc"][$i]  = $rs->fields['description'];
+	$mainLink["link"][$i]  = $rs->fields['link'];
+	$mainLink["chmod"][$i] = $rs->fields['chmod'];
+	
+	$mainlink["code"][$i]  = '<span id="navigation-links-cat1"><a href="'.$mainLink["link"][$i].'">'.$mainLink["name"][$i].'</a></span><base/>';
+	
+}
+
+
+
 ?>
