@@ -18,7 +18,7 @@
 			<div id="navigation-search">
 				<form id="form1" method="post" action="">
 					Suche: 
-					<label><input name="searchtext" type="text"/></label>
+					<label><input name="search" type="text"/></label>
 					<label><input type="submit" name="Submit" value="Suchen"/></label>
 				</form>
 			</div>
