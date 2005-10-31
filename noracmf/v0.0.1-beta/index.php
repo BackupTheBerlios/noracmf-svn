@@ -12,10 +12,9 @@
  * @lastchange 30.10.2005 21:10
 */
 define('nora', true);
-
+error_reporting(E_ALL);
 $rootpath = './';
 require_once($rootpath.'dependence.php');
-
 
 $template->display("index.xml", "indexHTML.xsl");
 ?>
